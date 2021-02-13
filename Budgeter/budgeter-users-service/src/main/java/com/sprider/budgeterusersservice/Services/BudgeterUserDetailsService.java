@@ -13,17 +13,25 @@ import org.springframework.stereotype.Service;
 public class BudgeterUserDetailsService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
-
-    @Override
+    
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         User user = userRepository.findByUserName(userName);
 
         if(user == null){throw new UsernameNotFoundException("User does not exist!");}
 
-        return new MyPrincipleUser(user);
-        // List<SimpleGrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority("user"));
-        // return new User(user.getUserName(), user.getPassword(), authorities);
-    
+        return new MyPrincipleUser(user);  
     }
+    
+    // @Override
+    // public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+    //     User user = userRepository.findByUserName(userName);
+
+    //     if(user == null){throw new UsernameNotFoundException("User does not exist!");}
+
+    //     return new MyPrincipleUser(user);
+    //     // List<SimpleGrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority("user"));
+    //     // return new User(user.getUserName(), user.getPassword(), authorities);
+    
+    // }
 }
 
