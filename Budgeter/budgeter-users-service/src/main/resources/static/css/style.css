@@ -1,27 +1,130 @@
+* {
+    list-style-type: none;
+    padding: 0 0 0 0 ;
+    margin: 0 0 0 0;
+    cursor: default;
+}
+
 
 body {
-        background-color: #F3EBF6;
         font-family: 'Ubuntu', sans-serif;
+        background: linear-gradient(to right, #9C27B0, #5c27b0, rgb(66, 34, 209));
+
+    }
+
+    /*navbar*/    
+
+
+    .navbar {
+        background-color: #0c040f;
+    }
+    ul{
+        display: flex;
+        width: 100%;
+        height: 60px;
+        margin: auto;
+        max-width: 1000px;
+        justify-content: space-between;
+        text-align: center;
+    }
+    li {
+        padding: 1rem 2rem 1.15rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #ebebeb;
+        min-width: 80px;
+        margin: auto;
     }
     
-    .main {
+    li:hover {
+      /* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
+      background-size: 100% 100%;
+      color: #ffffff;
+      animation: spring 500ms ease-out;
+      text-shadow: 0 -1px -3px #180202;
+        font-weight: bolder;
+    }
+    li:active {
+      transform: translateY(4px);
+    }
+    
+    @keyframes spring {
+      15% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.2, 1.1);
+      }
+      40% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(0.95, 0.95);
+      }
+      75% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.05, 1);
+      }
+      100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1, 1);
+      }
+    }
+    
+        
+    /*body*/
+
+    .splitter {
+        cursor: default ;
+        margin: 0 0 0 0;
+    }
+
+    .cards {
+        height: 860px;
+        margin: 0px auto 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .sign-in {
+        align-items: center;
         background-color: #FFFFFF;
-        width: 400px;
-        height: 400px;
-        margin: 7em auto;
+        width: 700px;
+        height: 700px;
+        margin: 7em ;
         border-radius: 1.5em;
         box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
     }
-    
-    .sign {
+
+    .sign-up {
+
+        background-color: #FFFFFF;
+        width: 700px;
+        height: 700px;
+        margin: 7em ;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+    .sign-label {
         padding-top: 40px;
-        color: #8C55AA;
+        color: #9C27B0;
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 23px;
     }
+
+    .label {
+        /* padding-top: 40px; */
+        color: #4b2361;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 0;
+        padding-bottom: 5px;
+        margin-left: 0;
+    }
+    
     
     .un {
+        cursor: text;
     width: 76%;
     color: rgb(38, 50, 56);
     font-weight: 700;
@@ -35,43 +138,29 @@ body {
     box-sizing: border-box;
     border: 2px solid rgba(0, 0, 0, 0.02);
     margin-bottom: 50px;
-    margin-left: 46px;
     text-align: center;
     margin-bottom: 27px;
     font-family: 'Ubuntu', sans-serif;
     }
     
-    form.form1 {
-        padding-top: 40px;
+    form.signinform {
+        padding-top: 20px;
+        text-align: center;
+        display: block;
+
     }
-    
-    .pass {
-            width: 76%;
-    color: rgb(38, 50, 56);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-    }
-    
-   
-    .un:focus, .pass:focus {
-        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    form.signupform {
+        padding-top: 20px;
+        text-align: center;
         
+    }
+       
+    .un:focus {
+        border: 3px solid rgba(139, 15, 196, 0.603) !important;        
     }
     
     .submit {
+        align-self: center;
       cursor: pointer;
         border-radius: 5em;
         color: #fff;
@@ -82,7 +171,6 @@ body {
         padding-bottom: 10px;
         padding-top: 10px;
         font-family: 'Ubuntu', sans-serif;
-        margin-left: 35%;
         font-size: 13px;
         box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
     }
@@ -90,7 +178,7 @@ body {
     .forgot {
         text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
         color: #E1BEE7;
-        padding-top: 15px;
+        padding-top: 20px;
     }
     
     a {
@@ -98,14 +186,17 @@ body {
         color: #E1BEE7;
         text-decoration: none
     }
+
+    
     
     @media (max-width: 600px) {
         .main {
             border-radius: 0px;
         }
+
+        .cards {
+            float: left;
+            display: block;
+            }
     }     
-        
-
-
-
 
