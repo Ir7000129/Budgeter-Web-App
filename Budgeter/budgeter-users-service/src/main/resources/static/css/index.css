@@ -2,88 +2,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
 html{
-    /* width: 100%;
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    margin: 0 0 2000px; bottom = footer height */
+    margin: 0 0 2000px; /*bottom = footer height*/
 
 }
 
 body {
-  margin: 0 0 2000px; /* bottom = footer height */
+  /* margin: 0 0 2000px; bottom = footer height */
   line-height: 1.5rem;
 
 }
 *{
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* font-size: 28px; */
-  font-weight: 600;
+  /* font-weight: 600; */
 	box-sizing: border-box;
 	list-style: none;
   text-decoration: none;
+  list-style-type: none;
+
+  padding: 0 0 0 0 ;
+  margin: 0 0 0 0;
+  cursor: default;
   
 }
 
--webkit-scrollbar {
-  background-color: #2b2f31;
-  color: #e7ddcf;
-}
 
-/*nav bar*/
-.xmfklnav-sprider {
-  background-color: #0c040f;
+body::-webkit-scrollbar {
+    width: 15px;
 }
-ul{
-  display: flex;
-  width: 100%;
-  height: 60px;
-  margin: auto;
-  max-width: 1000px;
-  justify-content: space-between;
-  text-align: center;
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #0c040f;
 }
-li {
-  padding: 1rem 2rem 1.15rem;
-text-transform: uppercase;
-cursor: pointer;
-color: #ebebeb;
-  min-width: 80px;
-  margin: auto;
-}
-
-li:hover {
-/* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
-background-size: 100% 100%;
-color: #ffffff;
-animation: spring 500ms ease-out;
-text-shadow: 0 -1px -3px #180202;
-  font-weight: bolder;
-}
-li:active {
-transform: translateY(4px);
-}
-
-@keyframes spring {
-15% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(1.2, 1.1);
-}
-40% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(0.95, 0.95);
-}
-75% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(1.05, 1);
-}
-100% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(1, 1);
-}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(61, 61, 61);
+  outline: 1px solid rgb(114, 114, 114);
 }
 
 
+    /*navbar*/    
+
+    .navbarsfd {
+      background-color: #0c040f;
+      width: 100%;
+      height: 60px;
+   
+
+  }
+  
+  .navbarsfd ul{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+  }
+ 
+  .navbarsfd li {
+      padding: 20px 40px  ;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ebebeb;
+  }
+  
+  .navbarsfd li:hover {
+    /* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
+    background-size: 100% 100%;
+    color: #ffffff;
+    animation: spring 500ms ease-out;
+    text-shadow: 0 -1px -3px #180202;
+      font-weight: bolder;
+  }
+  .navbarsfd li:active {
+    transform: translateY(4px);
+  }
+  
+  @keyframes spring {
+    15% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1.2, 1.1);
+    }
+    40% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(0.95, 0.95);
+    }
+    75% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1.05, 1);
+    }
+    100% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1, 1);
+    }
+  }
  
 
 .hero-image{
@@ -91,14 +107,15 @@ transform: translateY(4px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   color: white;
-  margin-top: 0px;
-  height: 200px;
+  height: 250px;
 }
 
 .hero_text
 {
-  align-items: unset;
+  padding-top: 40px;
+  text-align: center;
   font-weight: 900;
 }
 .main{
@@ -125,6 +142,7 @@ transform: translateY(4px);
    margin: 0 auto;
    display: block;
   justify-content: center;
+  
   }
 
 .plnircard{
@@ -265,6 +283,7 @@ p
 
 .allcards{
   /* display: inline-block; */
+  padding-top: 10px;
 }
 .center
 {
