@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
-html{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    margin: 0 0 2000px; /*bottom = footer height*/
+.login-signup{
+}
+
+.index{
 
 }
 
-body {
-  /* margin: 0 0 2000px; bottom = footer height */
-  line-height: 1.5rem;
+.login-signup-body{
+  background: linear-gradient(to right, #9C27B0, #5c27b0, rgb(66, 34, 209));
 
 }
+
 *{
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* font-size: 28px; */
@@ -23,11 +21,11 @@ body {
 	list-style: none;
   text-decoration: none;
   list-style-type: none;
-
+  cursor: default;
+  cursor: default;
   padding: 0 0 0 0 ;
   margin: 0 0 0 0;
-  cursor: default;
-  
+
 }
 
 
@@ -52,8 +50,9 @@ body::-webkit-scrollbar-thumb {
       background-color: #0c040f;
       width: 100%;
       height: 60px;
-   
-
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px 0 20px;
   }
   
   .navbarsfd ul{
@@ -109,12 +108,12 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 
   color: white;
-  height: 250px;
+  height: 300px;
 }
 
 .hero_text
 {
-  padding-top: 40px;
+  padding-top: 70px;
   text-align: center;
   font-weight: 900;
 }
@@ -135,62 +134,141 @@ body::-webkit-scrollbar-thumb {
   color:white;
 }
 
-.bitecards{
-  /* background-position: center; */
-  /* margin: 10px 0px; */
-  font-family:'Roboto Mono'; 
-   margin: 0 auto;
-   display: block;
+
+/* login css */
+/*body*/
+
+.splitter {
+  cursor: default ;
+  margin: 0 0 0 0;
+}
+
+.cards {
+  height: 860px;
+  margin: 0px auto 40px auto;
+  display: flex;
   justify-content: center;
+  align-items: center;
   
+}
+
+.sign-in {
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 700px;
+  height: 700px;
+  margin: 7em ;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign-up {
+
+  background-color: #FFFFFF;
+  width: 700px;
+  height: 700px;
+  margin: 7em ;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+.sign-label {
+  padding-top: 40px;
+  color: #9C27B0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.label {
+  /* padding-top: 40px; */
+  color: #4b2361;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 0;
+  padding-bottom: 5px;
+  margin-left: 0;
+}
+
+
+.un {
+  cursor: text;
+width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.signinform {
+  padding-top: 20px;
+  text-align: center;
+  display: block;
+
+}
+form.signupform {
+  padding-top: 20px;
+  text-align: center;
+  
+}
+ 
+.un:focus {
+  border: 3px solid rgba(139, 15, 196, 0.603) !important;        
+}
+
+.submit {
+  align-self: center;
+cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #E1BEE7;
+  padding-top: 20px;
+}
+
+a {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #E1BEE7;
+  text-decoration: none
+}
+
+
+
+@media (max-width: 600px) {
+  .main {
+      border-radius: 0px;
   }
 
-.plnircard{
-  grid-auto-rows: auto;
-  display: grid;
-  /* word-wrap: break-word; */
-  grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) );
-  position: relative;
-  grid-template-rows: 15px 300px;
-  grid-template-areas: "cardbody ""heading" "content";
-  border-radius: 15px;
-  color: #fcfcfc;
-  background: rgb(32, 29, 29);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1) !important;
-  cursor: pointer;
-  margin:20px;
-  text-align: center;
-}
+  .cards {
+      float: left;
+      display: block;
+      }
+}     
 
-.plnircard:hover {
-  /* transition:all 300ms linear; */
-  transform: scale(1.05) !important;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-}
 
-.card_heading{
-  grid-area: heading;
-}
-
-.card_heading h2 {
-  align-items: center;
-  font-size:20px;
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.card_body{
-  grid-area: cardbody;
-  margin: 10px 0px;
-}
-
-.card-content {
- /* color: grey/; */
-  font-size:15px;
-  font-weight: 300;
-}
 
 footer{
 bottom:0px
@@ -199,29 +277,6 @@ bottom:0px
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
  @media screen and (max-width: 700px) { 
-  /* #plnirsidebar {
-    top:60px;
-    left:0px;
-    position: fixed;
-    left: -10000px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 60px;
-  } */
-
-  /* #plnirsidebar li {
-    text-align: center ;
-    padding:20px 50px;
-    color:#fcfcfc;
-    text-transform:uppercase;
-    font-size:15px;
-
-    border-bottom:0cm;
-    border-left: 1px solid #f0f0f09a;
-  } */
-
-
   .plnircard{
     float:none;
   }

@@ -16,7 +16,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
             .anyRequest().authenticated() //Any other request needs the user to be authenticated with login
                 .and()
             .formLogin()
-            .loginPage("/login") //using a custom login form instead of spring security generated
+            .loginPage("/auth") //using a custom login form instead of spring security generated
             .permitAll() // permits anyone to access this page, otherwise error equals a 'Catch-22'
                 .and()
             .logout() 
