@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BudgeterDiscoveryServiceApplication<budgeter-discovery-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.sprider.budgeterdiscoveryservice.BudgeterDiscoveryServiceApplication",
+            "projectName": "budgeter-discovery-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BudgeterUsersServiceApplication<budgeter-users-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.sprider.budgeterusersservice.BudgeterUsersServiceApplication",
+            "projectName": "budgeter-users-service",
+            "args": ""
+        }
+    ]
+}

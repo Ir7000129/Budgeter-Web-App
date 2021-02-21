@@ -13,29 +13,19 @@ public class LoginController {
     
     @GetMapping("/")
     public String getIndex (){
-        return "index";
+      return "index";
     }
 
     @GetMapping("/auth")
-    public String getauth(){
-        return "login";
+    public String getauth(Model model){
+      model.addAttribute("user", new User());
+      return "login";
     }
 
     @PostMapping("/auth")
     public String authSubmit(@ModelAttribute User user, Model model){
-        return null;
-        //
+      model.addAttribute("user", user);
+      return "index";
+        
     }
-
-    @GetMapping("/greeting")
-  public String greetingForm(Model model) {
-    model.addAttribute("greeting", new Greeting());
-    return "greeting";
-  }
-
-  @PostMapping("/greeting")
-  public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-    model.addAttribute("greeting", greeting);
-    return "result";
-  }
 }
