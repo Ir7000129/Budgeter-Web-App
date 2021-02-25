@@ -15,7 +15,7 @@ public class MyPrincipleUser implements UserDetails {
     private static final long serialVersionUID = 1L;
     private User user;
 
-    public MyPrincipleUser(User user2) {
+    public MyPrincipleUser(User user) {
         this.user = user;
     }
 
