@@ -23,14 +23,14 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 
       <div class="navbarsfd">
         <ul>
-          <a href="index.html" ><li>Home</li> </a>
-          <a href="index.html" ><li>Net Worth</li></a>
-          <a href="index.html" ><li>About</li></a>
-          <a href="index.html" ><li>Summary</li></a>
+          <a th:href="@{/}" ><li>Home</li> </a>
+          <a th:href="@{/}" ><li>Net Worth</li></a>
+          <a th:href="@{/}" ><li>About</li></a>
+          <a th:href="@{/}" ><li>Summary</li></a>
         </ul>
     
         <ul>
-          <a href="login.html"><li>Login</li></a>  
+          <a th:href="@{/auth}"><li>Login</li></a>  
         </ul>
       </div>
 

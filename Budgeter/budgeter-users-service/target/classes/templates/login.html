@@ -8,7 +8,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="C:\Users\Sprid\Documents\GitHub\Budgeter-Web-App\Budgeter\budgeter-users-service\src\main\resources\static\css\index.css"/ >
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
     <link rel="stylesheet" th:href="@{/css/index.css}"/>
     <link rel="stylesheet" href="C:/Users/Sprid/Desktop/Code Related/fontawesome-free-5.15.1-web/css/font-awesome.min.css">
     
@@ -16,16 +16,18 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
   </head>
 
 <body class="login-signup-body">
+ 
+ 
   <div class="navbarsfd">
     <ul>
-      <a href="index.html" ><li>Home</li> </a>
-      <a href="index.html" ><li>Net Worth</li></a>
-      <a href="index.html" ><li>About</li></a>
-      <a href="index.html" ><li>Summary</li></a>
+      <a th:href="@{/}" ><li>Home</li> </a>
+      <a th:href="@{/}" ><li>Net Worth</li></a>
+      <a th:href="@{/}" ><li>About</li></a>
+      <a th:href="@{/}" ><li>Summary</li></a>
     </ul>
 
     <ul>
-      <a href="login.html"><li>Login</li></a>  
+      <a th:href="@{/auth}"><li>Login</li></a>  
     </ul>
   </div>
   
@@ -35,9 +37,9 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 
           <p class="sign-label" align="center" >Sign in</p>
 
-          <form class="signinform" method="post" th:action="@{/user}" th:object="${user}">
-            <div > <input class="un " type="text"  placeholder="Username" th:field="{userName}" required> </div>
-            <div> <input class="un" type="password"  placeholder="Password" th:field="{password}" required> </div>
+          <form class="signinform" method="post" th:action="@{/auth}" th:object="${user}">
+            <div > <input class="un " type="text"  placeholder="Username" th:field="*{userName}" required> </div>
+            <div> <input class="un" type="password"  placeholder="Password" th:field="*{password}" required> </div>
             <input class="submit" type="submit" value="Sign in" />
             <a href="#"><p class="forgot">Forgot Password?</p></a>
 
@@ -51,7 +53,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
           <p class="sign-label" align="center" >Sign Up</p>
 
 
-          <form class="signupform" th:action="@{/auth}" th:object="@{/user}" >
+          <form class="signupform" th:action="@{/auth}" th:object="${user}" >
             <div> <input class="un" type="text"  placeholder="Username" th:field="{userName}" required> </div>
             <div> <input class="un" type="password"  placeholder="Password" th:field="{password}" required> </div> 
             <div> <input class="un" type="password"  placeholder="Re-enter - Password*" required></div>
